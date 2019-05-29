@@ -35,7 +35,7 @@ void send(int type, int start, int end) {
         pthread_cond_wait(&msg_out, &mutex);
     }
     
-    // Append packet
+    // Enqueue packet
     mqueue[q_in].type = type;
     mqueue[q_in].start = start;
     mqueue[q_in].end = end;
